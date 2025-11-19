@@ -11,7 +11,7 @@ warnings.filterwarnings("ignore")
 
 # --- Configuration ---
 AGENT_MODE = False                # set True -> auto-run the suggested fix
-LLM_MODEL  = "gemma3n:latest"           # Change to your model (e.g., llama3, mistral)
+LLM_MODEL  = "gemma3n:latest"     # Change to your model (e.g., llama3, mistral)
 
 # Tools that take over the full screen or require raw TTY access.
 # We do NOT capture output for these to prevent UI glitches.
@@ -205,7 +205,8 @@ if __name__ == "__main__":
 
     parser = argparse.ArgumentParser(description="Use LLM to fix shell commands.")
     parser.add_argument("--agent", default=False, action="store_true", help="Use agent mode.")
+    parser.add_argument("--llm", default="gemma3n:latest", help="Language model to use.")
 
     args = parser.parse_args()
-    AGENT_MODE = args.agent
+    AGENT_MODE, LLM_MODEL = args.agent, args.llm
     main()
