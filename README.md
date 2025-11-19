@@ -90,20 +90,7 @@ Run this command? [y/N] y
 # (Runs 'git status' successfully)
 ```
 
-### 3. Complex Errors
-If a compilation fails or a python script crashes:
-
-```bash
-lsh:/home/user$ python3 my_broken_script.py
-# Output: Traceback... NameError: name 'pd' is not defined...
-
-Analyzing failure... Done.
-
-Suggested Fix: pip install pandas && python3 my_broken_script.py
-Run this command? [y/N]
-```
-
-### 4. Use natural language to run shell command
+### 3. Use natural language to run shell command (The Magic)
 If you dont know what command to use, just ask shell how to run it.
 
 ```bash
