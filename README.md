@@ -102,7 +102,7 @@ Suggested Fix: pip install pandas && python3 my_broken_script.py
 Run this command? [y/N]
 ```
 
-### 4. Use LLM to run shell command
+### 4. Use natural language to run shell command
 If you dont know what command to use, just ask shell how to run it.
 
 ```bash
